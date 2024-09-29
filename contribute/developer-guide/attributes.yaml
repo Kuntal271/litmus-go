@@ -1,0 +1,49 @@
+---
+name: "openstack-vm-stop"
+version: "0.1.0"
+category: "openstack"
+repository: "https://github.com/litmuschaos/litmus-go/tree/master/openstack/openstack-vm-stop"
+community: "https://kubernetes.slack.com/messages/CNXNB0ZTN"
+description: "This chaos experiment stops an OpenStack VM to test resilience."
+keywords:
+  - "openstack"
+  - "vm"
+  - "stop"
+platforms:
+  - OpenStack
+scope: "Namespaced"
+auxiliaryappcheck: false
+permissions:
+  - apigroups:
+      - ""
+      - "batch"
+      - "apps"
+      - "litmuschaos.io"
+    resources:
+      - "jobs"
+      - "pods"
+      - "pods/log"
+      - "events"
+      - "deployments"
+      - "replicasets"
+      - "chaosengines"
+      - "chaosexperiments"
+      - "chaosresults"
+    verbs:
+      - "create"
+      - "list"
+      - "get"
+      - "patch"
+      - "update"
+      - "delete"
+      - "deletecollection"
+maturity: "alpha"
+maintainers:
+  - name: "Kuntal Bar"
+    email: "barkuntal6@gmail.com" 
+provider:
+  name: "ChaosNative"
+minkubernetesversion: "1.12.0"
+references:
+  - name: Documentation
+    url: "https://docs.openstack.org/"
