@@ -32,7 +32,7 @@ type ExperimentDetails struct {
 	LIBImagePullPolicy        string
 	IsTargetContainerProvided bool
 	VMInstanceName            string
-	Region                    string
+	Regions                   string
 	Sequence                  string
 	AuthURL                   string
 	Username                  string

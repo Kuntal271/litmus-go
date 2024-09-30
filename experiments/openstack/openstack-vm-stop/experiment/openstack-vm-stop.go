@@ -72,7 +72,7 @@ func VMInstanceStop(clients clients.ClientSets) {
 	// DISPLAY THE INSTANCE INFORMATION
 	log.InfoWithValues("The VM instance information is as follows", logrus.Fields{
 		"Instance Names": experimentsDetails.VMInstanceName,
-		"Region":         experimentsDetails.Region,
+		"Region":         experimentsDetails.Regions,
 		"Sequence":       experimentsDetails.Sequence,
 	})
 
